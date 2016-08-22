@@ -1,7 +1,7 @@
 package com.training.clonetest;
 
 /**
- *This Employee class illustrates CLone objects behavior
+ * This Employee class illustrates CLone objects behavior
  * 
  * @author Ponmalar
  *
@@ -14,6 +14,10 @@ public class Employee implements Cloneable {
 	public Employee(String name, String designation) {
 		this.name = name;
 		this.designation = designation;
+	}
+
+	public Object clone() throws CloneNotSupportedException {
+		return super.clone();
 	}
 
 	public void printDetails() {
