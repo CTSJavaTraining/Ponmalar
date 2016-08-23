@@ -24,6 +24,7 @@
 		<module>TrainingTest</module>
 		<module>SpringBootDemo</module>
 		<module>JDBCDemo</module>
+		<module>JDBCTraining</module>
 	</modules>
 	<properties>
 		<sonar.host.url>http://10.242.133.153:9000/</sonar.host.url>
