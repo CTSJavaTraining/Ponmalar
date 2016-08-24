@@ -51,7 +51,7 @@ public class EmployeeJDBC {
 	 * @throws SQLException
 	 */
 	public Connection getConnection() throws ClassNotFoundException, SQLException {
-		
+
 		Class.forName("com.mysql.jdbc.Driver");
 		getSqlURL();
 		connectionUrl = sqlurl + ip + dataBaseName;
@@ -137,9 +137,9 @@ public class EmployeeJDBC {
 			tempStatement = "insert into Employee (id, name) values (23, 'XXX')";
 			ps = (PreparedStatement) dbConnection.prepareStatement(tempStatement);
 			ps.executeUpdate();
-			/*if (true) {
-				//throw new Exception("Ohhhh..");
-			}*/
+			/*
+			 * if (true) { //throw new Exception("Ohhhh.."); }
+			 */
 			dbConnection.commit();
 			System.out.println("success");
 		} catch (Exception e) {
