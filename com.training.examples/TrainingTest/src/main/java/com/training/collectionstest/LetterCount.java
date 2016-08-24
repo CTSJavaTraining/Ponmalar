@@ -1,6 +1,9 @@
 package com.training.collectionstest;
 
 import java.util.Map;
+
+import org.apache.log4j.Logger;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -14,6 +17,7 @@ import java.util.HashMap;
  *
  */
 public class LetterCount {
+	private static org.apache.log4j.Logger log = Logger.getLogger(LetterCount.class);
 
 	public static void main(String args[]) throws IOException {
 
@@ -34,7 +38,7 @@ public class LetterCount {
 				numChars.put(charAt, numChars.get(charAt) + 1);
 			}
 		}
-
+		log.info("Count successful");
 		System.out.println(numChars);
 	}
 
