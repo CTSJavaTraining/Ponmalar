@@ -126,6 +126,12 @@ public class EmployeeJDBC {
 
 	}
 
+	/**
+	 * this method checks the rollback() option in transaction management
+	 * 
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 */
 	public void transactionCheck() throws ClassNotFoundException, SQLException {
 		Connection dbConnection = null;
 		try {

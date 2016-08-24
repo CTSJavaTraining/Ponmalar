@@ -6,7 +6,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Ponmalar</name>
-
+<repositories>
+<repository>
+<id>id1</id>
+<url>http://repo.maven.apache.org/maven2</url>
+</repository>
+</repositories>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
