@@ -11,9 +11,6 @@ import java.sql.SQLException;
  */
 public class EmployeeMain {
 
-	private EmployeeMain() {
-
-	}
 
 	/**
 	 * the main method creates an object for the EmployyJDBC class and calls the

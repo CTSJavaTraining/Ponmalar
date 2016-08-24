@@ -23,7 +23,6 @@
 	<modules>
 		<module>TrainingTest</module>
 		<module>SpringBootDemo</module>
-		<module>JDBCDemo</module>
 		<module>JDBCTraining</module>
 	</modules>
 	<properties>
