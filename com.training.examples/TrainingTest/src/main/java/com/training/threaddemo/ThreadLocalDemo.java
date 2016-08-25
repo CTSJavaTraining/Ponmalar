@@ -42,6 +42,7 @@ public class ThreadLocalDemo implements Runnable {
 		Thread t2 = new Thread(tlm);
 		t1.start();
 		t2.start();
+
 	}
 
 }
