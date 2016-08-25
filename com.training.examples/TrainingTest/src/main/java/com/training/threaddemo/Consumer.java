@@ -52,7 +52,7 @@ class Consumer implements Runnable {
 						"List is empty " + Thread.currentThread().getName() + " is waiting , size: " + taskList.size());
 				taskList.wait();
 			}
-			//Thread.sleep(1000);
+			Thread.sleep(1000);
 			int i = (Integer) taskList.remove(0);
 			System.out.println("Consumed: " + i);
 			taskList.notifyAll();

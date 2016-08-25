@@ -58,7 +58,7 @@ class Producer implements Runnable {
 				taskList.wait();
 			}
 
-			//Thread.sleep(1000);
+			Thread.sleep(1000);
 			taskList.add(i);
 			System.out.println("Produced: " + i);
 			taskList.notifyAll();
