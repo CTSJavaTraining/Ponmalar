@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import org.apache.log4j.Logger;
+
 /**
  * this class creates object for the Employee class in the same package and
  * calls the method according to the user choice
@@ -12,8 +14,9 @@ import java.io.InputStreamReader;
  *
  */
 public class EmployeeMain {
-
+	private static org.apache.log4j.Logger log = Logger.getLogger(EmployeeMain.class);
 	public static void main(String[] args) throws NumberFormatException, IOException {
+		
 		int choice;
 		System.out.println("Please enter numberSelect Operations");
 		System.out.println("1. Display");
@@ -28,6 +31,7 @@ public class EmployeeMain {
 		emp.addEmployee();
 		switch (choice) {
 		case 1:
+			log.info("User has chose to print emplouyees");
 			emp.printEmployee();
 			break;
 		case 2:

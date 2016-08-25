@@ -8,6 +8,10 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
+import com.mysql.jdbc.log.Log;
+
 /**
  * This class manipulates the employee details using the getters, setters and
  * constructor of EmployeeDetails Class
@@ -17,7 +21,7 @@ import java.util.List;
  */
 
 public class Employee {
-
+	private static org.apache.log4j.Logger log = Logger.getLogger(Employee.class);
 	private static List<EmployeeDetails> employeeList = new LinkedList<EmployeeDetails>();
 	private static EmployeeDetails empdet = new EmployeeDetails();
 
@@ -36,6 +40,7 @@ public class Employee {
 	 * this method populates the employee details
 	 */
 	public void addEmployee() {
+		log.info("Employee details are loaded");
 		empdet = new EmployeeDetails("08CSC26", "Ruth", "PA", "Madu", 45000);
 		employeeList.add(empdet);
 		empdet = new EmployeeDetails("08CSC27", "Malar", "PA", "Viru", 25000);
