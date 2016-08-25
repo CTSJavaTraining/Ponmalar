@@ -20,12 +20,12 @@ public class Employee {
 
 	private static List<EmployeeDetails> employeeList = new LinkedList<EmployeeDetails>();
 	private static EmployeeDetails empdet = new EmployeeDetails();
-	private Iterator<EmployeeDetails> empDetailsIterator = employeeList.iterator();
 
 	/**
 	 * this method prints the employee details
 	 */
 	public void printEmployee() {
+		Iterator<EmployeeDetails> empDetailsIterator = employeeList.iterator();
 		while (empDetailsIterator.hasNext()) {
 			empdet = (EmployeeDetails) empDetailsIterator.next();
 			System.out.println(empdet.getName());
@@ -36,13 +36,13 @@ public class Employee {
 	 * this method populates the employee details
 	 */
 	public void addEmployee() {
-		empdet = new EmployeeDetails("08CSC26", "Ruth", "PA", "Madu", 35000);
+		empdet = new EmployeeDetails("08CSC26", "Ruth", "PA", "Madu", 45000);
 		employeeList.add(empdet);
 		empdet = new EmployeeDetails("08CSC27", "Malar", "PA", "Viru", 25000);
 		employeeList.add(empdet);
 		empdet = new EmployeeDetails("08CSC28", "PonMalar", "PA", "Vada", 35000);
 		employeeList.add(empdet);
-		empdet = new EmployeeDetails("08CSC29", "Malar", "PA", "Vada", 35000);
+		empdet = new EmployeeDetails("08CSC29", "XXX", "PA", "Vada", 15000);
 		employeeList.add(empdet);
 	}
 
@@ -66,6 +66,7 @@ public class Employee {
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(isr);
 		String empid = br.readLine();
+		Iterator<EmployeeDetails> empDetailsIterator = employeeList.iterator();
 		while (empDetailsIterator.hasNext()) {
 			empdet = (EmployeeDetails) empDetailsIterator.next();
 			if (empdet.getId().equals(empid)) {
@@ -78,4 +79,12 @@ public class Employee {
 		}
 	}
 
+	/**
+	 * this method sorts employee according to their salary
+	 */
+	public void sortEmployeeJAVA8() {
+		employeeList.sort((EmployeeDetails h1, EmployeeDetails h2) -> String.valueOf((h1.getSalary()))
+				.compareTo(String.valueOf((h2.getSalary()))));
+		printEmployee();
+	}
 }

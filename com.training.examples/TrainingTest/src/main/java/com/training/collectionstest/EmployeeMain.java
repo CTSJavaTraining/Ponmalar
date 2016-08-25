@@ -19,6 +19,7 @@ public class EmployeeMain {
 		System.out.println("1. Display");
 		System.out.println("2. Sort and Display");
 		System.out.println("3. Delete Employee");
+		System.out.println("4. Sort employee according to salary");
 		InputStreamReader is = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(is);
 		System.out.println("Enter Option: ");
@@ -37,11 +38,14 @@ public class EmployeeMain {
 			emp.deleteEmployee();
 			emp.printEmployee();
 			break;
+		case 4:
+			emp.sortEmployeeJAVA8();
 		default:
 			System.out.println("Please enter right value");
 			break;
 
 		}
+		
 
 	}
 
