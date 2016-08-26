@@ -31,6 +31,11 @@ public class ThreadLocalDemo implements Runnable {
 		System.out.println(Thread.currentThread().getName() + " Value: " + threadLocal.get());
 	}
 
+	/**
+	 * CheckA and CheckB methods has a sysout alone just to proove the concept
+	 * of thread local that the value declared as threadLocal is global and
+	 * local to the thread
+	 */
 	public void checkA() {
 		System.out.println(Thread.currentThread().getName() + " Value: " + threadLocal.get() + "Inside Class A");
 		CheckB();
