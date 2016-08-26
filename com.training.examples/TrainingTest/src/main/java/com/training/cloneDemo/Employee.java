@@ -1,4 +1,4 @@
-package com.training.clonetest;
+package com.training.cloneDemo;
 
 /**
  * This Employee class illustrates CLone objects behavior
