@@ -12,6 +12,7 @@ public class ThreadLocalDemo implements Runnable {
 	 * static to understand the threadlocal concept more clearly
 	 */
 	static Double value = 0.0D;
+	ThreadLocal<Double> threadLocal = new ThreadLocal<Double>();
 
 	/**
 	 * the run method is overriden and the value is set to threadlocal here and
@@ -19,14 +20,26 @@ public class ThreadLocalDemo implements Runnable {
 	 */
 	@Override
 	public void run() {
-		ThreadLocal<Double> tl = new ThreadLocal<Double>();
-		tl.set((value = Math.random() * 100D));
+
+		threadLocal.set((value = Math.random() * 100D));
+		checkA();
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println(Thread.currentThread().getName() + " Value: " + tl.get());
+		System.out.println(Thread.currentThread().getName() + " Value: " + threadLocal.get());
+	}
+
+	public void checkA() {
+		System.out.println(Thread.currentThread().getName() + " Value: " + threadLocal.get() + "Inside Class A");
+		CheckB();
+
+	}
+
+	public void CheckB() {
+		System.out.println(Thread.currentThread().getName() + " Value: " + threadLocal.get() + "Inside Class B");
+
 	}
 
 	/**
