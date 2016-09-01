@@ -66,6 +66,7 @@ public class CRUDMain {
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void displayRecords() {
+		System.out.println();
 		session = createSession();
 		Transaction t = session.beginTransaction();
 		 List<Employee> employee = session.createQuery("FROM Employee").list(); 
@@ -76,7 +77,6 @@ public class CRUDMain {
          }
 		t.commit();
 		session.close();
-		System.out.println("successfully saved");
 
 	}
 
