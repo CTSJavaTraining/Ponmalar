@@ -11,7 +11,7 @@ public class MainControl {
 		System.out.println("2. Delete Records");
 		System.out.println("3. Display Records");
 		System.out.println("4. Update Employee Name");
-		CRUDMain cm = new CRUDMain();
+		EmployeeDAO cm = new EmployeeDAO();
 		InputStreamReader ir = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(ir);
 		int choice = Integer.parseInt(br.readLine());

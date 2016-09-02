@@ -19,9 +19,9 @@ import org.springframework.core.io.Resource;
 
 
 @SuppressWarnings("deprecation")
-public class CRUDMain {
+public class EmployeeDAO {
 
-	private static org.apache.log4j.Logger log = Logger.getLogger(CRUDMain.class);
+	private static org.apache.log4j.Logger log = Logger.getLogger(EmployeeDAO.class);
 	Session session;
 
 
