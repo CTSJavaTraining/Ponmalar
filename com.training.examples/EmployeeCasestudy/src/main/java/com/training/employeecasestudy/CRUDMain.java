@@ -53,6 +53,7 @@ public class CRUDMain {
 		Address addr1 = new Address(e1, "14\15", "Vadapalani", "TN");
 		address.add(addr1);
 		e1.setAddress(address);*/
+		emp1.calcBonus();
 		log.info("values set to employee object successfully");
 		session.persist(emp1);
 		t.commit();
@@ -109,7 +110,7 @@ public class CRUDMain {
 		String name=br.readLine();
 		Employee e1 = (Employee) session.get(Employee.class, delId);
 		e1.setEmployeeName(name);
-		session.update(e1); 
+		session.persist(e1); 
 		t.commit();
 		log.info("Record " +delId +"has been updated with name " + name);
 		session.close();

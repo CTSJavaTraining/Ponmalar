@@ -10,6 +10,7 @@ public class MainControl {
 		System.out.println("1. Insert reacords");
 		System.out.println("2. Delete Records");
 		System.out.println("3. Display Records");
+		System.out.println("4. Update Employee Name");
 		CRUDMain cm = new CRUDMain();
 		InputStreamReader ir = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(ir);
@@ -23,6 +24,9 @@ public class MainControl {
 			break;
 		case 3:
 			cm.displayRecords();
+			break;
+		case 4:
+			cm.updateEmployeeName();
 			break;
 		default:
 			System.out.println("Please enter proper values");

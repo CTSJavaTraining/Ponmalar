@@ -226,17 +226,16 @@ public class Employee implements Serializable {
 
 	public void calcBonus() {
 		char temp = getGrade();
-		if (temp == 'A') {
-			double tempSalary = getSalary();
-			setBonus(8);
-			tempSalary = salary + tempSalary * getBonus();
-			setSalary(tempSalary);
-		} else if (temp == 'B') {
-			double tempSalary = getSalary();
-			setBonus(8);
-			tempSalary = salary + tempSalary * getBonus();
-			setSalary(tempSalary);
-
+		int bonus_temp=0;
+		if((temp=='A')|| (temp=='a'))
+		{
+			bonus_temp = (int) ((getSalary()*8)/100);
+			setBonus(bonus_temp);
+		}
+		else
+		{
+			bonus_temp = (int) ((getSalary()*6.5)/100);
+			setBonus(bonus_temp);
 		}
 	}
 
