@@ -53,6 +53,19 @@ public class EmployeeDAO {
 		Address addr1 = new Address(e1, "14\15", "Vadapalani", "TN");
 		address.add(addr1);
 		e1.setAddress(address);*/
+		boolean check = emp1.equals(emp1.getEmail());
+		if(check==true){
+			emp1.setEmail(emp1.getEmail());
+		}
+		else{
+			try {
+				throw new Exception("Wrong Email");
+			} catch (Exception e) {
+				t.rollback();
+				System.out.println("Failed due to invalid email ID");
+				log.error("Failed due to wrong Email");
+			}
+		}
 		emp1.calcBonus();
 		log.info("values set to employee object successfully");
 		session.persist(emp1);

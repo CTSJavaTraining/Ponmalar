@@ -24,7 +24,6 @@ import javax.persistence.Table;
 public class Employee implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
 
 	@Id
 	@Column(name = "id")
@@ -73,11 +72,10 @@ public class Employee implements Serializable {
 	 * }
 	 * 
 	 * public Employee(int id, String employeeName, String designation, double
-	 * salary, String doj, char grade, String email, ArrayList<Address>
-	 * address) { this.id = id; this.employeeName = employeeName;
-	 * this.designation = designation; this.salary = salary; this.bonus = 0.0d;
-	 * this.doj = doj; this.grade = grade; this.email = email; this.address =
-	 * address; }
+	 * salary, String doj, char grade, String email, ArrayList<Address> address)
+	 * { this.id = id; this.employeeName = employeeName; this.designation =
+	 * designation; this.salary = salary; this.bonus = 0.0d; this.doj = doj;
+	 * this.grade = grade; this.email = email; this.address = address; }
 	 */
 
 	/**
@@ -226,17 +224,24 @@ public class Employee implements Serializable {
 
 	public void calcBonus() {
 		char temp = getGrade();
-		int bonus_temp=0;
-		if((temp=='A')|| (temp=='a'))
-		{
-			bonus_temp = (int) ((getSalary()*8)/100);
+		int bonus_temp = 0;
+		if ((temp == 'A') || (temp == 'a')) {
+			bonus_temp = (int) ((getSalary() * 8) / 100);
+			setBonus(bonus_temp);
+		} else {
+			bonus_temp = (int) ((getSalary() * 6.5) / 100);
 			setBonus(bonus_temp);
 		}
-		else
+	}
+
+	public boolean validateEmail(String emailTemp) {
+		String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+		boolean validity = false;
+		if(emailTemp.matches(regex))
 		{
-			bonus_temp = (int) ((getSalary()*6.5)/100);
-			setBonus(bonus_temp);
+			validity = true;
 		}
+		return validity;
 	}
 
 	public void displayEmploye() {
