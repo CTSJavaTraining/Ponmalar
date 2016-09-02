@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="addr1" class="com.training.employeecasestudyc.Address">
+		<property name="id" value="447432"></property>
+		<property name="doorno" value="22/23"></property>
+		<property name="streetName" value="Choo"></property>
+		<property name="state" value="TN"></property>
+	</bean>
+	<bean id="addr2" class="com.training.employeecasestudyc.Address">
+		<property name="id" value="447432"></property>
+		<property name="doorno" value="25/23"></property>
+		<property name="streetName" value="Choolaimedu"></property>
+		<property name="state" value="TN"></property>
+	</bean>
+
+	<bean id="emp" class="com.training.employeecasestudyc.Employee">
+		<property name="id" value="447432"></property>
+		<property name="employeeName" value="Ruth"></property>
+		<property name="designation" value="PA"></property>
+		<property name="salary" value="30000"></property>
+		<property name="doj" value="28-06-1991"></property>
+		<property name="grade" value="B"></property>
+		<property name="email" value="abcxxx@gmail.com"></property>
+		<property name="address">
+			<list>
+				<ref bean="addr1" />
+				<ref bean="addr2" />
+			</list>
+		</property>
+
+	</bean>
+</beans>            

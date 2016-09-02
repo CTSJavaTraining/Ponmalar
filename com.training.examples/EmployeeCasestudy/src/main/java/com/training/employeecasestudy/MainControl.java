@@ -13,19 +13,17 @@ public class MainControl {
 		CRUDMain cm = new CRUDMain();
 		InputStreamReader ir = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(ir);
-		int choice=Integer.parseInt(br.readLine());
+		int choice = Integer.parseInt(br.readLine());
 		switch (choice) {
 		case 1:
-			cm.inserRecords();
+			cm.insertRecords();
 			break;
-
 		case 2:
 			cm.deleteRecords();
 			break;
 		case 3:
 			cm.displayRecords();
 			break;
-			
 		default:
 			System.out.println("Please enter proper values");
 			break;
