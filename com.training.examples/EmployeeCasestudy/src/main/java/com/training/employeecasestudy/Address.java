@@ -43,6 +43,12 @@ public class Address implements Serializable {
 	 * @param streetName
 	 * @param state
 	 */
+	
+	public Address()
+	{
+		
+	}
+	
 	public Address(Employee id, String doorNo, String streetName, String state) {
 		this.foreignId = id;
 		this.doorNo = doorNo;
