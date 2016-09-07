@@ -9,13 +9,13 @@
 		<constructor-arg type="Employee" ref="emp"></constructor-arg>
 		<constructor-arg value="25/23"></constructor-arg>
 		<constructor-arg value="Choolaimedu"></constructor-arg>
-		<constructor-arg value="TN" ></constructor-arg>
+		<constructor-arg value="TN"></constructor-arg>
 	</bean>
 	<bean id="addr2" class="com.training.employeecasestudy.Address">
 		<constructor-arg type="Employee" ref="emp"></constructor-arg>
 		<constructor-arg value="24/22"></constructor-arg>
 		<constructor-arg value="Choola"></constructor-arg>
-		<constructor-arg value="TN" ></constructor-arg>
+		<constructor-arg value="TN"></constructor-arg>
 	</bean>
 
 	<bean id="emp" class="com.training.employeecasestudy.Employee">

@@ -66,18 +66,6 @@ public class Employee implements Serializable {
 	 * @param email
 	 */
 
-	/*
-	 * public Employee() {
-	 * 
-	 * }
-	 * 
-	 * public Employee(int id, String employeeName, String designation, double
-	 * salary, String doj, char grade, String email, ArrayList<Address> address)
-	 * { this.id = id; this.employeeName = employeeName; this.designation =
-	 * designation; this.salary = salary; this.bonus = 0.0d; this.doj = doj;
-	 * this.grade = grade; this.email = email; this.address = address; }
-	 */
-
 	/**
 	 * @return the address
 	 */
@@ -222,38 +210,34 @@ public class Employee implements Serializable {
 		this.email = email;
 	}
 
+	/**
+	 * this method is used to calculate the bonus of the employee
+	 */
 	public void calcBonus() {
 		char temp = getGrade();
-		int bonus_temp = 0;
+		int bonustemp;
 		if ((temp == 'A') || (temp == 'a')) {
-			bonus_temp = (int) ((getSalary() * 8) / 100);
-			setBonus(bonus_temp);
+			bonustemp = (int) ((getSalary() * 8) / 100);
+			setBonus(bonustemp);
 		} else {
-			bonus_temp = (int) ((getSalary() * 6.5) / 100);
-			setBonus(bonus_temp);
+			bonustemp = (int) ((getSalary() * 6.5) / 100);
+			setBonus(bonustemp);
 		}
 	}
 
+	/**
+	 * this method is used to validate the email address of the employee
+	 * 
+	 * @param emailTemp
+	 * @return
+	 */
 	public boolean validateEmail(String emailTemp) {
 		String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
 		boolean validity = false;
-		if(emailTemp.matches(regex))
-		{
+		if (emailTemp.matches(regex)) {
 			validity = true;
 		}
 		return validity;
-	}
-
-	public void displayEmploye() {
-		System.out.println("Employee Details:");
-		System.out.println("ID: " + id);
-		System.out.println("Name:" + employeeName);
-		System.out.println("Designation:" + designation);
-		System.out.println("Salary:" + salary);
-		System.out.println("Bonus: " + bonus);
-		System.out.println("DOJ: " + doj);
-		System.out.println("Grade:" + grade);
-		System.out.println("Email:" + email);
 	}
 
 }

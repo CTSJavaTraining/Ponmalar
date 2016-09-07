@@ -9,6 +9,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+/**
+ * this class is an entity class that corresponds to Address table in DB
+ * 
+ * @author 447383
+ *
+ */
 @Entity
 @Table(name = "address")
 public class Address implements Serializable {
@@ -43,12 +49,23 @@ public class Address implements Serializable {
 	 * @param streetName
 	 * @param state
 	 */
-	
-	public Address()
-	{
-		
+
+	/**
+	 * 
+	 * this non parameterized constructor is used to initiate Address class
+	 */
+	public Address() {
+		// this method is empty because it is just used to initiate the class
 	}
-	
+
+	/**
+	 * this parameterized constructor is used to initiate address values
+	 * 
+	 * @param id
+	 * @param doorNo
+	 * @param streetName
+	 * @param state
+	 */
 	public Address(Employee id, String doorNo, String streetName, String state) {
 		this.foreignId = id;
 		this.doorNo = doorNo;
@@ -119,14 +136,4 @@ public class Address implements Serializable {
 	protected void setState(String state) {
 		this.state = state;
 	}
-
-	/**
-	 * A method that displays the address of the employee
-	 */
-	public void displayAddress() {
-		System.out.println("Door Number: " + getDoorNo());
-		System.out.println("Street Name: " + getStreetName());
-		System.out.println("State: " + getState());
-	}
-
 }

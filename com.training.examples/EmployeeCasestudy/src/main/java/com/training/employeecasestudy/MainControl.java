@@ -4,8 +4,31 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * this class is the main class from which all other classes and methods are
+ * called according to the need
+ * 
+ * @author 447383
+ *
+ */
 public class MainControl {
-	public static void main(String[] args) throws NumberFormatException, IOException {
+
+	/**
+	 * 
+	 */
+	private MainControl() {
+		//
+	}
+
+	/**
+	 * this method is used to call other methods in other classes according to
+	 * user needs
+	 * 
+	 * @param args
+	 * @throws NumberFormatException
+	 * @throws IOException
+	 */
+	public static void main(String[] args) throws IOException {
 		System.out.println("Please enter the operation to be executed on DB");
 		System.out.println("1. Insert reacords");
 		System.out.println("2. Delete Records");
