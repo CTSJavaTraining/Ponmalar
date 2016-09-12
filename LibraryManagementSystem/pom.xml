@@ -1,0 +1,14 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>LibrarySystem</groupId>
+    <artifactId>LibrarySystem</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>LibraryManagementSystem</groupId>
+  <artifactId>LibraryManagementSystem</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>LibraryManagementSystem</name>
+  <description>Library Management System is a Project that describes an library managemnt system		</description>
+  <packaging>pom</packaging>
+</project>
